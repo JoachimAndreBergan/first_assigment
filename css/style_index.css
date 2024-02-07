@@ -1,0 +1,20 @@
+*{
+    background-image:url(../assets/images/space_texture_background.jpeg);
+    background-size: cover;
+}
+
+h1{
+    font-family: star_jedi_font;
+    font-weight: 300;
+    font-size: 200px;
+    color:rgb(155, 132, 0);
+}
+
+.header_container h2, h3{
+    font-family:phantom_episode_font ;
+    color: rgb(155, 132, 0);
+}
+
+.main_container h2{
+    font-family: star_jedi_font;
+}
