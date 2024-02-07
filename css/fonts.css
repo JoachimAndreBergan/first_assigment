@@ -1,4 +1,9 @@
 @font-face {
     font-family:star_jedi_font;
-    src: url(../assets/Starjout.ttf);
+    src: url(../assets/fonts/Starjout.ttf);
+}
+
+@font-face {
+    font-family:phantom_episode_font;
+    src: url(../assets/fonts/EPISODE1.TTF);
 }
