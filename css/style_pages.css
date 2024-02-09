@@ -1,0 +1,23 @@
+*{
+    background-image:url(../assets/images/space_texture_background.jpeg);
+    background-size: cover;
+}
+
+h1{
+    font-family: star_jedi_font;
+    font-weight: 300;
+    font-size: 200px;
+    color:rgb(155, 132, 0);
+}
+
+.sub_header{
+    border: 2px solid black;
+    display: flex;
+    height: 2.5rem;
+}
+
+.table-header span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
