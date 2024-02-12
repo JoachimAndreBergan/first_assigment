@@ -5,47 +5,50 @@ const fetchUsers =  async ()=>{
    // fetch (`https://reqres.in/api/users?page=1`)
     //.then(response => response.json())
     //.then(data => console.log(data.data))
-    const response = await fetch('https://reqres.in/api/users?page=2');
+    const response = await fetch('https://swapi.dev/api/films/');
     const result = await response.json();
-    renderData(result.data)
-    
+    renderData(result.results)
+    console.log(result.results)
 }
 
 fetchUsers()
 
-function renderData(users){
-    users.forEach(user =>{
+function renderData(films){
+    films.forEach(film =>{
         //Creating Elements
 
         const li = document.createElement("li");
 
-        const userId = document.createElement("span");
-        const userFirstname = document.createElement("span");
-        const userLastname = document.createElement("span");
-        const userEmail = document.createElement("span");
-        const userAvatar = document.createElement("span");
-        const image = document.createElement('img')
+        const filmTitle = document.createElement("span");
+        const episodeID = document.createElement("span");
+        const releaseYear = document.createElement("span");
+        const theDirector = document.createElement("span");
+        const theProducer = document.createElement("span");
+        //const image = document.createElement('img')
 
         //ADDING THE CLASS
-        li.classList.add('userItem')
-        userId.classList.add('user-id')
-        userFirstname.classList.add('user-firstname')
-        userLastname.classList.add('user-lastname')
-        userEmail.classList.add('user-email')
-        userAvatar.classList.add('user-avatar')
+        li.classList.add('filmItem')
+        filmTitle.classList.add('item-1')
+        episodeID.classList.add('item-2')
+        releaseYear.classList.add('item-3')
+        theDirector.classList.add('item-4')
+        theProducer.classList.add('item-5')
+        
+        
 
         //Appending elements
 
         ul.append(li)
-        li.append(userId, userFirstname, userLastname, userEmail, userAvatar)
-        userAvatar.append(image)
+        li.append(filmTitle, episodeID, releaseYear, theDirector, theProducer)
+        //userAvatar.append()
 
         //Adding content:
 
-        userId.textContent = user.id;
-        userFirstname.textContent = user.first_name
-        userLastname.textContent = user.last_name
-        userEmail.textContent = user.email
-        image.src = user.avatar
+        filmTitle.textContent = film.title;
+        episodeID.textContent = film.episode_id
+        releaseYear.textContent = film.release_date
+        theDirector.textContent = film.director
+        theProducer.textContent = film.producer
+        
     });
 }
