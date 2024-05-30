@@ -2,9 +2,6 @@ const ul = document.querySelector('ul')
 
 
 const fetchUsers =  async ()=>{
-   // fetch (`https://reqres.in/api/users?page=1`)
-    //.then(response => response.json())
-    //.then(data => console.log(data.data))
     const response = await fetch('https://swapi.dev/api/films/');
     const result = await response.json();
     renderData(result.results)
@@ -40,7 +37,7 @@ function renderData(films){
 
         ul.append(li)
         li.append(filmTitle, episodeID, releaseYear, theDirector, theProducer)
-        //userAvatar.append()
+        //image.append(img(/assets/films_images/episode_1.jpeg))
 
         //Adding content:
 
